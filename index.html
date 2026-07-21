@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstração segura do Nexa Fiscal, dashboard de gestão fiscal.">
+  <title>Nexa Fiscal — Demonstração</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="demo-banner">AMBIENTE DEMONSTRATIVO · dados fictícios · nenhuma nota fiscal é transmitida</div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><img src="assets/nexa-logo.png" alt="Nexa Fiscal"><span>NEXA <b>FISCAL</b></span></div>
+      <div class="profile"><div class="avatar">FB</div><strong>Felipe Bastos</strong><small>Conta de demonstração</small></div>
+      <nav aria-label="Navegação principal">
+        <button class="nav-item active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+        <button class="nav-item" data-view="pacientes">♟ <span>Clientes</span></button>
+        <button class="nav-item" data-view="emitir">▤ <span>Simular nota</span></button>
+        <button class="nav-item" data-view="historico">▧ <span>Histórico</span></button>
+      </nav>
+      <div class="side-footer"><span class="status-dot"></span> Beta de portfólio<br><small>Núcleo fiscal não incluído</small></div>
+    </aside>
+
+    <main>
+      <header><div><p class="eyebrow">GESTÃO FISCAL</p><h1 id="page-title">Dashboard</h1></div><button id="refresh" class="secondary">Atualizar dados</button></header>
+
+      <section id="dashboard" class="view active">
+        <div class="filters" role="group" aria-label="Período"><button data-period="3">3 meses</button><button data-period="6">6 meses</button><button class="selected" data-period="12">12 meses</button></div>
+        <div class="cards">
+          <article><span>Faturamento simulado</span><strong id="revenue">R$ 46.480,00</strong><small class="positive">↑ 8,4% no período</small></article>
+          <article><span>Notas simuladas</span><strong id="invoice-count">282</strong><small>rascunhos e concluídas</small></article>
+          <article><span>Clientes atendidos</span><strong id="client-count">40</strong><small>dados demonstrativos</small></article>
+          <article><span>Ticket médio</span><strong id="average">R$ 164,82</strong><small>valor por atendimento</small></article>
+        </div>
+        <div class="grid">
+          <article class="panel chart-panel"><div class="panel-title"><div><h2>Faturamento por mês</h2><p>Valores inteiramente fictícios</p></div></div><div id="chart" class="chart"></div></article>
+          <article class="panel"><div class="panel-title"><div><h2>Status das notas</h2><p>Visão operacional</p></div></div><div class="status-list"><div><span><i class="blue"></i>Concluídas</span><b>248</b></div><div><span><i class="yellow"></i>Rascunhos</span><b>21</b></div><div><span><i class="red"></i>Canceladas</span><b>13</b></div></div></article>
+        </div>
+        <article class="panel"><div class="panel-title"><div><h2>Atividade recente</h2><p>Exemplos gerados para esta demonstração</p></div><button class="link-button" data-go="historico">Ver histórico</button></div><div class="table-wrap"><table><thead><tr><th>Data</th><th>Cliente</th><th>Documento</th><th>Valor</th><th>Status</th></tr></thead><tbody id="recent-body"></tbody></table></div></article>
+      </section>
+
+      <section id="pacientes" class="view">
+        <article class="panel"><div class="panel-title"><div><h2>Clientes de demonstração</h2><p>Nenhuma informação pessoal real é utilizada</p></div><input id="search" type="search" placeholder="Buscar cliente..."></div><div id="client-grid" class="client-grid"></div></article>
+      </section>
+
+      <section id="emitir" class="view">
+        <article class="panel form-panel"><div class="panel-title"><div><h2>Simulador de nota</h2><p>Cria apenas uma prévia local; não há comunicação com prefeituras ou APIs fiscais</p></div><span class="badge warning">MODO SEGURO</span></div>
+          <form id="invoice-form"><label>Cliente<select id="invoice-client" required></select></label><label>Serviço<select required><option>Avaliação profissional</option><option>Consultoria técnica</option><option>Atendimento especializado</option></select></label><div class="form-row"><label>Valor (R$)<input id="invoice-value" type="number" min="1" step="0.01" value="180" required></label><label>Data<input id="invoice-date" type="date" required></label></div><label>Descrição<textarea rows="3">Serviço prestado conforme atendimento agendado.</textarea></label><button class="primary" type="submit">Gerar prévia demonstrativa</button></form>
+          <div id="preview" class="preview" hidden><span class="badge">PRÉVIA · SEM VALIDADE FISCAL</span><h3>Rascunho criado com sucesso</h3><p id="preview-text"></p><small>A versão comercial possui integrações e validações que não fazem parte desta demonstração pública.</small></div>
+        </article>
+      </section>
+
+      <section id="historico" class="view">
+        <article class="panel"><div class="panel-title"><div><h2>Histórico demonstrativo</h2><p>Busca e filtros executados localmente no navegador</p></div><select id="status-filter"><option value="Todos">Todos os status</option><option>Concluída</option><option>Rascunho</option><option>Cancelada</option></select></div><div class="table-wrap"><table><thead><tr><th>Data</th><th>Cliente</th><th>Documento</th><th>Valor</th><th>Status</th></tr></thead><tbody id="history-body"></tbody></table></div></article>
+      </section>
+    </main>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
