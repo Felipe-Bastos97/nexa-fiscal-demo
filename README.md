@@ -1,22 +1,40 @@
-# Nexa Fiscal — demonstração de portfólio
+# Nexa Fiscal — automação de notas fiscais em Python
 
-Versão demonstrativa e segura de uma solução autoral para gestão de notas fiscais de serviços. O projeto público apresenta a experiência do usuário e alguns fluxos simulados, sem disponibilizar o núcleo do produto comercial.
+Projeto de automação desenvolvido originalmente em **Python** para apoiar o fluxo de notas fiscais de serviços. A solução privada organiza dados, cadastros e histórico, prepara informações para emissão e centraliza o acompanhamento operacional.
 
-## O que esta demonstração comprova
+Este repositório é uma **versão demonstrativa de portfólio**. A interface em HTML, CSS e JavaScript existe para que recrutadores e visitantes conheçam visualmente a proposta do sistema pelo navegador. Ela não substitui o núcleo original em Python e não emite notas fiscais.
 
-- construção de interface responsiva e dashboard gerencial;
+> Em resumo: o produto original é uma automação para notas fiscais construída em Python; o HTML deste repositório é uma vitrine interativa, segura e sem dados reais.
+
+## Demonstração online
+
+[Abrir a demonstração do Nexa Fiscal](https://felipe-bastos97.github.io/nexa-fiscal-demo/)
+
+## O que este projeto demonstra
+
+- desenvolvimento de automações e regras de negócio em Python no sistema original;
+- organização de fluxos relacionados a notas fiscais de serviços;
 - modelagem de clientes, documentos, valores e status;
+- construção de interface responsiva e dashboard gerencial;
 - filtros, busca, indicadores e gráficos com JavaScript;
 - cuidado com privacidade e separação entre demonstração e produção;
-- visão de produto para um sistema comercial no modelo SaaS.
+- visão de produto para uma futura solução comercial.
 
-## Funcionalidades da beta
+## Funcionalidades da versão beta
 
 - dashboard com indicadores e períodos selecionáveis;
 - clientes fictícios com documentos mascarados;
 - histórico local com filtro de status;
 - simulador que gera somente uma prévia sem validade fiscal;
 - aviso permanente de ambiente demonstrativo.
+
+## Arquitetura e tecnologias
+
+- **Sistema original privado:** Python, persistência de dados e automação do fluxo fiscal.
+- **Vitrine pública:** HTML5, CSS3 e JavaScript, sem dependências externas.
+- **Versionamento:** Git e GitHub.
+
+Credenciais, integrações fiscais, regras internas e o código comercial em Python permanecem no ambiente privado.
 
 ## Proteção do produto comercial
 
@@ -30,7 +48,7 @@ Este repositório **não contém**:
 
 Todos os nomes, documentos, valores e identificadores exibidos são fictícios. A simulação roda somente no navegador e não transmite dados.
 
-## Executar localmente
+## Executar a vitrine localmente
 
 Abra `index.html` no navegador. Se preferir usar um servidor local:
 
@@ -39,10 +57,6 @@ python -m http.server 8000
 ```
 
 Depois acesse `http://localhost:8000`.
-
-## Tecnologias da demonstração
-
-HTML5, CSS3 e JavaScript, sem dependências externas. A arquitetura comercial é mantida separadamente em ambiente privado.
 
 ## Status
 
