@@ -1,5 +1,7 @@
 # Nexa Fiscal — automação de notas fiscais em Python
 
+![Capa do projeto Nexa Fiscal](assets/linkedin-featured-cover.png)
+
 Projeto de automação desenvolvido originalmente em **Python** para apoiar o fluxo de notas fiscais de serviços. A solução privada organiza dados, cadastros e histórico, prepara informações para emissão e centraliza o acompanhamento operacional.
 
 Este repositório é uma **versão demonstrativa de portfólio**. A interface em HTML, CSS e JavaScript existe para que recrutadores e visitantes conheçam visualmente a proposta do sistema pelo navegador. Ela não substitui o núcleo original em Python e não emite notas fiscais.
@@ -36,6 +38,15 @@ Este repositório é uma **versão demonstrativa de portfólio**. A interface em
 
 Credenciais, integrações fiscais, regras internas e o código comercial em Python permanecem no ambiente privado.
 
+## Fluxo da automação
+
+1. **Entrada de dados:** recebimento e organização das informações necessárias para o processo fiscal.
+2. **Validação:** conferência de campos obrigatórios e aplicação das regras de negócio.
+3. **Processamento em Python:** preparação e tratamento automatizado dos dados.
+4. **Acompanhamento:** registro do resultado e atualização do histórico operacional.
+
+Esse fluxo apresenta a lógica geral do projeto sem expor integrações, credenciais ou regras comerciais sensíveis.
+
 ## Proteção do produto comercial
 
 Este repositório **não contém**:
@@ -61,6 +72,18 @@ Depois acesse `http://localhost:8000`.
 ## Status
 
 Beta demonstrativa criada exclusivamente para portfólio. A identidade e o núcleo do produto comercial permanecem privados.
+
+## Sobre o desenvolvedor
+
+Desenvolvido por **Felipe Bastos**, profissional em evolução na área de tecnologia, com experiência prática em:
+
+- Python e automação de processos;
+- n8n e criação de fluxos automatizados;
+- bots e atendimento automatizado para WhatsApp;
+- interfaces web para demonstração de produtos;
+- Git e GitHub para versionamento e publicação.
+
+[Conheça outros projetos no GitHub](https://github.com/Felipe-Bastos97)
 
 ## Direitos
 
